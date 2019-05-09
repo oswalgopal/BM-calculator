@@ -12,16 +12,15 @@ nav{
 .wrapper{
     margin:auto;
     font-weight :bold;
-    width: 320px;
+    width: 330px;
     margin-top:5%;
-    
 }
 
 input{
     float: right;
 }
 
-@media screen and (max-width:320px){
+@media screen and (max-width:330px){
     .wrapper{
         width:100%;
     }
