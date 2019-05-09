@@ -2,6 +2,27 @@ body{
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLA5HQQJt4KdxGAtzqDDCFGkjAqK-_LPE0fTlCiIM0YtAbuq-P')
 }
 
+nav{
+    /* background-color: white; */
+    border-bottom: 1px solid black;
+    color: black;
+}
+
+
 .wrapper{
-    text-align: center;
+    margin:auto;
+    font-weight :bold;
+    width: 320px;
+    margin-top:5%;
+    
+}
+
+input{
+    float: right;
+}
+
+@media screen and (max-width:320px){
+    .wrapper{
+        width:100%;
+    }
 }
