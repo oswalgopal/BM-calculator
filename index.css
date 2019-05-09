@@ -25,3 +25,11 @@ input{
         width:100%;
     }
 }
+
+.btn-reset{
+    float: left;
+    width: 50%;
+}
+.btn-submit{
+    width: 50%;
+}
