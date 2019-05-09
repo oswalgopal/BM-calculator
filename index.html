@@ -61,9 +61,10 @@
             <input type="number" id="BMI" title="BMI" value=" " disabled>
             <br>
             <br>
+            <h3 id="text" class="font-weight-bold"></h3>
+            <br>
             <input type="submit" class="btn btn-success btn-submit" id="button" value="calculate" onclick="BMI_calculate()">
             <input type="reset" id="reset" class="btn btn-danger btn-reset" onclick="reset()" >
-
     </div>
 
     <script>
@@ -75,7 +76,41 @@
             var h = document.getElementById("height").value;
             var m = h*h;
             var BMI = w/m;
-            document.getElementById("BMI").value = BMI;
+            document.getElementById("BMI").value = BMI; 
+
+            if(BMI < 18.5)       //underweight
+            {
+                var para= document.createElement("H3");
+                var node =  document.createTextNode("You are Underweight");
+                para.appendChild(node);
+                var text= document.getElementById("text");
+                text.appendChild(para);
+            }
+            if ((BMI < 24.5) && (BMI>18.5)){           // normal
+                var para= document.createElement("P");
+                var node =  document.createTextNode("You are Normal");
+                para.appendChild(node);
+                var text= document.getElementById("text");
+                text.appendChild(para);
+            }
+
+            if((BMI>24.5)&&(BMI<29.9)){   //overweight
+                var para= document.createElement("P");
+                var node =  document.createTextNode("You are Overweight");
+                para.appendChild(node);
+                var text= document.getElementById("text");
+                text.appendChild(para);
+            }
+            if(BMI>30.0)  {  //very overweight
+                var para= document.createElement("P");
+                var node =  document.createTextNode("You are obese");
+                para.appendChild(node);
+                var text= document.getElementById("text");
+                text.appendChild(para);
+            }
+
+
+
         }
 
         function reset() {
