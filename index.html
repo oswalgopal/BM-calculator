@@ -61,7 +61,7 @@
             <br>
             <br>
             <input type="submit" class="" id="button" value="calculate" onclick="BMI_calculate()">
-            <!-- <input type="reset" id="reset" > -->
+            <input type="reset" id="reset" onclick="reset()" >
 
     </div>
 
@@ -75,6 +75,14 @@
             var m = h*h;
             var BMI = w/m;
             document.getElementById("BMI").value = BMI;
+        }
+
+        function reset() {
+            document.getElementById("name").value = " " ;
+            document.getElementById("weight").value = " " ;
+            document.getElementById("Age").value = " " ;
+            document.getElementById("height").value = " " ;
+            document.getElementById("BMI").value = " ";
         }
     
     </script>
